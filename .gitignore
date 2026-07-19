@@ -7,3 +7,9 @@ package_tests.ipynb
 shakespeare/
 
 data/
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+*.egg

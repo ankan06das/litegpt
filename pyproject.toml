@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "litegpt"
+version = "0.1.0"
+description = "A minimal GPT-2 implementation for training from scratch"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "tiktoken",
+    "numpy",
+]
+
+[project.optional-dependencies]
+hf = ["datasets"]
+all = ["datasets"]
+
+[tool.setuptools.packages.find]
+include = ["litegpt*"]
