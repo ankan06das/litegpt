@@ -121,7 +121,7 @@ class GPT(nn.Module):
         x = self.embedding(x, pos)
         
         for block in self.blocks:
-            x = block(x)
+            x = block(x, mask=mask)
         
         x = self.final_ln(x)
         logits = self.out_head(x)
